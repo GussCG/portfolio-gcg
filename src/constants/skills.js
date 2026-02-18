@@ -1,0 +1,53 @@
+export const skills = [
+  {
+    category: "Lenguajes",
+    useIcons: true,
+    items: [
+      "JavaScript",
+      "Python",
+      "SQL",
+      "Java",
+      "C",
+      "C#",
+      "C++",
+      "Dart",
+      "PHP",
+    ],
+  },
+  {
+    category: "Frameworks y Librerías",
+    useIcons: true,
+    items: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "SASS",
+      "Handlebars",
+      "Flutter",
+      "FastAPI",
+      "React Flow",
+      "API de Google Maps",
+      "Gemini API",
+      "Scikit-learn",
+      "Uvicorn",
+    ],
+  },
+  {
+    category: "Bases de Datos",
+    useIcons: true,
+    items: ["MySQL", "PostgreSQL", "Supabase"],
+  },
+  {
+    category: "Otras Competencias",
+    useIcons: false,
+    items: [
+      "UX/UI",
+      "APIs REST",
+      "Git y GitHub",
+      "Scrum",
+      "Microsoft Office",
+      "Azure",
+      "Unity3D",
+    ],
+  },
+];

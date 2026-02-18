@@ -1,0 +1,256 @@
+@use "../variables" as *;
+
+.sidebar {
+  grid-area: sidebar;
+
+  width: 320px;
+  height: 100%;
+
+  box-shadow: var(--boxshadow-container);
+
+  backdrop-filter: blur(20px);
+  background: var(--background-container);
+  border: var(--border-container);
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "profile" "nav" "social";
+
+  .sidebar__header {
+    position: relative;
+    min-height: 380px;
+    height: auto;
+    grid-area: profile;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+
+    .profile-image-wrapper {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+
+        object-fit: cover;
+
+        filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    .profile-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-text-strong);
+      margin-bottom: 6px;
+    }
+
+    .profile-role {
+      font-size: 0.95rem;
+      color: var(--accent-color-role);
+      letter-spacing: 0.5px;
+    }
+
+    .toggle-theme-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      svg {
+        font-size: 1.5rem;
+        color: var(--accent-color-role);
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--accent-text-strong);
+        }
+      }
+    }
+  }
+
+  .sidebar__nav {
+    grid-area: nav;
+    padding: 20px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        padding: 14px 20px;
+        border-radius: 12px;
+
+        font-weight: 500;
+        text-decoration: none;
+
+        color: var(--accent-color-role);
+
+        background-color: var(--nav-bg-color);
+        backdrop-filter: blur(30px);
+
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--nav-bg-color-hover);
+          color: var(--accent-color);
+          transform: scale(1.1);
+        }
+
+        &.active {
+          background: linear-gradient(
+            135deg,
+            var(--accent-gradient-strong),
+            var(--gradient-color)
+          );
+          color: #fff;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+          .nav-icon {
+            opacity: 1;
+          }
+        }
+
+        .nav-icon {
+          font-size: 1.2rem;
+          opacity: 0.8;
+
+          transition: opacity 0.3s ease;
+        }
+      }
+    }
+  }
+
+  .sidebar__footer {
+    grid-area: social;
+
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 10px 16px;
+      border-radius: 10px;
+
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      color: var(--accent-color-role);
+      background-color: var(--nav-bg-color);
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(
+          145deg,
+          var(--accent-gradient-strong),
+          var(--gradient-color)
+        );
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      svg {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    width: 80px;
+    transition: width 0.3s ease;
+
+    .sidebar__header {
+      min-height: auto;
+      padding: 15px 5px;
+
+      .profile-image-wrapper,
+      .profile-name,
+      .profile-role {
+        display: none;
+      }
+
+      .toggle-theme-button {
+        position: static;
+        margin-bottom: 10px;
+      }
+    }
+
+    .sidebar__nav {
+      padding: 10px;
+
+      ul {
+        align-items: center;
+
+        .nav-link {
+          padding: 14px;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          gap: 0;
+
+          span:not(.nav-icon) {
+            display: none;
+          }
+
+          .nav-icon {
+            font-size: 1.4rem; // Un poco más grande para que destaque
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .sidebar__footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 5px;
+
+      .social-link {
+        padding: 12px;
+        width: 50px;
+        height: 50px;
+
+        justify-content: center;
+
+        span,
+        b {
+          display: none;
+        }
+
+        svg {
+          font-size: 1.3rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+[data-theme="dark"] {
+  --color-cream: #0f172a;
+
+  --accent-text: #ffffff;
+  --accent-color-role: color-mix(
+    in srgb,
+    var(--accent-color) 50%,
+    rgb(255, 255, 255)
+  );
+  /* Texto */
+  --accent-text-strong: color-mix(in srgb, var(--accent-color) 80%, white);
+
+  --accent-gradient-strong: var(--accent-color);
+  --accent-gradient-soft: color-mix(in srgb, var(--accent-color) 70%, white);
+
+  --accent-bg: color-mix(in srgb, var(--accent-color) 60%, black);
+
+  --dynamic-bg:
+    radial-gradient(circle at 18% 28%, var(--accent-bg) 0%, transparent 65%),
+    radial-gradient(
+      circle at 85% 75%,
+      var(--accent-gradient-soft) 0%,
+      transparent 65%
+    ),
+    var(--color-cream);
+
+  --background-container: rgba(60, 60, 60, 0.364);
+  --border-container: 4px solid rgba(255, 255, 255, 0.06);
+  --boxshadow-container: 0 25px 60px rgba(0, 0, 0, 0.7);
+
+  --text-color: #e2e8f0;
+
+  --nav-bg-color: rgba(255, 255, 255, 0.1);
+  --nav-bg-color-hover: rgba(255, 255, 255, 0.2);
+
+  --gradient-color: var(--accent-color-role);
+
+  --button-primary-bg: var(--accent-color);
+  --button-primary-hover-bg: color-mix(in srgb, var(--accent-color) 80%, white);
+  --button-primary-color: #ffffff;
+
+  --button-secondary-bg: rgba(255, 255, 255, 0.1);
+  --button-secondary-hover-bg: rgba(255, 255, 255, 0.2);
+  --button-secondary-color: #ffffff;
+
+  --main-email-bg: color-mix(in srgb, var(--accent-color) 55%, rgb(0, 0, 0));
+  --main-email-border: color-mix(
+    in srgb,
+    var(--accent-color) 90%,
+    rgb(0, 0, 0)
+  );
+}
