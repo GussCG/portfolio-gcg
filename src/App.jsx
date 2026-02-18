@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { ThemeProvider } from "./context/ThemeContext";
-import "./styles/app.scss";
+import "./styles/App.scss";
 import Home from "./components/sections/Home/Home";
 import Projects from "./components/sections/Project/Projects";
 import Skills from "./components/sections/Skills/Skills";
