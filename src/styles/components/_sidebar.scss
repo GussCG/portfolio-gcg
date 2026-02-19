@@ -341,10 +341,12 @@
           background: transparent;
           backdrop-filter: none;
           padding: 0;
+          color: var(--accent-color-role);
 
           &.active {
             background: transparent;
             box-shadow: none;
+            color: var(--accent-color);
           }
 
           .nav-icon {

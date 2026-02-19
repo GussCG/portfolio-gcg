@@ -60,6 +60,39 @@
       height: 30vw;
       animation: floatCenter 9s infinite alternate;
     }
+
+    @media (max-width: 768px) {
+      filter: blur(60px);
+
+      div {
+        width: 80vw;
+        height: 80vw;
+        opacity: 0.4;
+      }
+
+      .g1 {
+        top: -5%;
+        left: -20%;
+      }
+      .g2 {
+        bottom: 10%;
+        right: -25%;
+      }
+      .g3 {
+        top: 25%;
+        left: -30%;
+      }
+      .g4 {
+        bottom: -10%;
+        left: -20%;
+      }
+      .g5 {
+        top: 50%;
+        right: -30%;
+        width: 60vw;
+        height: 60vw;
+      }
+    }
   }
 
   .grid-overlay {
