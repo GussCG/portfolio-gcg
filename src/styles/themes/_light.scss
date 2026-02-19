@@ -25,7 +25,7 @@
     ),
     var(--color-cream);
 
-  --background-container: rgba(255, 255, 255, 0.22);
+  --background-container: rgba(255, 255, 255, 0.4);
   --border-container: 4px solid rgba(255, 255, 255, 0.1);
   --boxshadow-container: 0 20px 50px rgba(0, 0, 0, 0.3);
 
@@ -50,12 +50,14 @@
 
   --main-email-bg: color-mix(
     in srgb,
-    var(--accent-color) 55%,
+    var(--accent-color) 30%,
     rgb(255, 255, 255)
   );
   --main-email-border: color-mix(
     in srgb,
-    var(--accent-color) 90%,
+    var(--accent-color) 50%,
     rgb(255, 255, 255)
   );
+
+  --bg-overlay-color: rgba(0, 0, 0, 0.03);
 }

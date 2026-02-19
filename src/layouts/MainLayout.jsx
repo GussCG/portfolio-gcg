@@ -2,51 +2,67 @@ import { useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import { useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import BGContainer from "../components/Others/BGContainer";
 
 function MainLayout({ children }) {
   const location = useLocation();
   const { theme } = useTheme();
 
   useEffect(() => {
-    const routeColors = {
+    const routePalettes = {
       "/": {
-        light: "#7b3300",
-        dark: "#803300",
+        accent: "#803300",
+        bubbles: ["#803300", "#b44800", "#ff6c0a", "#a45a28", "#522100"],
       },
       "/projects": {
-        light: "#00245e",
-        dark: "#001536",
+        accent: "#001536",
+        bubbles: ["#001536", "#00245e", "#003a94", "#000a1a", "#0047b3"],
       },
       "/skills": {
-        light: "#004600",
-        dark: "#00270e",
+        accent: "#00270e",
+        bubbles: ["#00270e", "#004600", "#006400", "#001205", "#007a00"],
       },
       "/education": {
-        light: "#500000",
-        dark: "#450000",
+        accent: "#450000",
+        bubbles: ["#450000", "#6b0000", "#900000", "#200000", "#c00000"],
       },
       "/about": {
-        light: "#270051",
-        dark: "#461c6e",
+        accent: "#461c6e",
+        bubbles: ["#461c6e", "#270051", "#6a1b9a", "#1a0033", "#8e24aa"],
       },
       "/contact": {
-        light: "#987900",
-        dark: "#a07600",
+        accent: "#a07600",
+        bubbles: ["#a07600", "#d4a017", "#ffc107", "#5c4300", "#ffb300"],
       },
     };
 
-    const route = routeColors[location.pathname] || routeColors["/"];
+    const palette = routePalettes[location.pathname] || routePalettes["/"];
 
-    const newColor = route[theme];
+    document.documentElement.style.setProperty(
+      "--accent-color",
+      palette.accent,
+    );
 
-    document.documentElement.style.setProperty("--accent-color", newColor);
+    palette.bubbles.forEach((color, index) => {
+      document.documentElement.style.setProperty(
+        `--bubble-${index + 1}`,
+        color,
+      );
+    });
+
+    const bgColor = theme === "dark" ? "#0a0a0a" : "#f5f5f5";
+    const blendMode = theme === "dark" ? "screen" : "multiply";
+    document.documentElement.style.setProperty("--bg-main", bgColor);
+    document.documentElement.style.setProperty("--blend-mode", blendMode);
   }, [location.pathname, theme]);
 
   return (
-    <div className="app-layout">
-      <Sidebar />
-      <main className="app-content">{children}</main>
-    </div>
+    <BGContainer>
+      <div className="app-layout">
+        <Sidebar />
+        <main className="app-content">{children}</main>
+      </div>
+    </BGContainer>
   );
 }
 
