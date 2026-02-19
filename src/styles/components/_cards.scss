@@ -1,12 +1,14 @@
 @use "../variables" as *;
 
 .project-card {
+  width: 100%;
+  box-sizing: border-box;
   min-width: 0;
   background: var(--background-container);
   border: var(--border-container);
 
   border-radius: 18px;
-  padding: 28px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
@@ -15,20 +17,21 @@
   transition: all 0.35s ease;
 
   .project-header {
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
 
     h3 {
-      font-size: 1.1rem;
+      font-size: clamp(0.7rem, 2vw, 0.8rem);
       color: var(--accent-color-role);
     }
   }
 
   .category {
-    font-size: 0.7rem;
-    padding: 5px 12px;
+    font-size: clamp(0.5rem, 1.5vw, 0.6rem);
+    padding: 5px clamp(10px, 2vw, 12px);
     border-radius: 20px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -50,8 +53,12 @@
   }
 
   .description {
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     line-height: 1.6;
+    text-align: justify;
+    hyphens: auto;
+    text-justify: inter-character;
+    line-break: loose;
   }
 
   .tech-stack {
@@ -69,8 +76,8 @@
       cursor: pointer;
 
       .tech-icon {
-        width: 20px;
-        height: 20px;
+        width: clamp(18px, 2vw, 20px);
+        height: auto;
         color: var(--accent-color-role);
       }
     }
@@ -78,8 +85,9 @@
 
   .highlights {
     padding-left: 18px;
-    font-size: 0.85rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     color: var(--accent-color-role);
+    text-align: left;
 
     li {
       margin-bottom: 6px;
@@ -90,8 +98,10 @@
     background: $achievement-bg;
     padding: 12px;
     border-radius: 12px;
-    font-size: 0.85rem;
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+    font-weight: 200;
     border: $achievement-border;
+    text-align: left;
 
     .achievement {
       width: 100%;
@@ -120,9 +130,10 @@
   .project-links {
     margin-top: auto;
     display: flex;
-    gap: 20px;
+    gap: clamp(12px, 2vw, 18px);
 
     a {
+      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
       font-weight: 600;
       text-decoration: none;
       color: $project-link;

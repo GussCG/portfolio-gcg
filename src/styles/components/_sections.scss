@@ -146,13 +146,14 @@
 
         .filters {
           display: flex;
-          gap: 20px;
+          gap: 10px;
           margin-top: 10px;
           padding-left: 20px;
 
           button {
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
             font-family: $font-primary;
-            padding: 8px 16px;
+            padding: clamp(8px, 1.5vw, 12px) clamp(15px, 3vw, 18px);
             border: none;
             border-radius: 10px;
             background: var(--nav-bg-color);
@@ -202,11 +203,10 @@
         width: 100%;
         align-self: center;
 
-        padding-right: 10px;
-
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+        gap: 15px;
+        padding-right: 5px; // Menos padding lateral para ganar espacio
 
         @media (max-width: 550px) {
           grid-template-columns: 1fr;
@@ -244,11 +244,14 @@
       margin-top: 20px;
 
       .contact-item {
+        font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+        max-width: 100%;
+        overflow: hidden;
         display: flex;
         align-items: center;
         gap: 15px;
 
-        padding: 16px 20px;
+        padding: 12px 15px;
         border-radius: 12px;
 
         background: var(--background-container);
@@ -266,23 +269,25 @@
         }
 
         .contact-icon {
-          font-size: 1.5rem;
+          font-size: clamp(1.2rem, 3vw, 1.5rem);
           color: var(--accent-color);
         }
 
         .contact-text {
+          min-width: 0;
+          flex: 1;
           display: flex;
           flex-direction: column;
-        }
 
-        .contact-label {
-          font-size: 0.75rem;
-          opacity: 0.6;
-        }
+          .contact-label {
+            font-size: clamp(0.6rem, 1.5vw, 0.9rem);
+            opacity: 0.6;
+          }
 
-        .contact-value {
-          font-size: 1rem;
-          font-weight: 500;
+          .contact-value {
+            font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+            font-weight: 500;
+          }
         }
 
         &.main-email {
@@ -295,15 +300,26 @@
         }
 
         &.location {
+          @media (max-width: 550px) {
+            flex-direction: column;
+          }
+
+          .contact-value {
+            font-size: clamp(0.6rem, 1.5vw, 0.9rem);
+            font-weight: 500;
+            color: var(--accent-color-role);
+          }
+
           .availability {
             display: flex;
-            gap: 10px;
+            gap: 6px;
             flex-wrap: wrap;
+            justify-content: center;
           }
 
           .availability-badge {
-            font-size: 0.7rem;
-            padding: 4px 10px;
+            font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+            padding: 3px 8px;
             border-radius: 20px;
             background: var(--accent-gradient-strong);
             color: black;
@@ -312,6 +328,22 @@
 
             &:hover {
               opacity: 1;
+            }
+          }
+        }
+
+        @media (max-width: 1200px) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          .contact-text {
+            .contact-label {
+              text-align: center;
+            }
+
+            .contact-value {
+              text-align: center;
             }
           }
         }
@@ -349,6 +381,11 @@
         }
       }
 
+      h2 {
+        font-size: clamp(0.9rem, 5vw, 1.6rem);
+        color: var(--accent-color-role);
+      }
+
       .about-header {
         grid-area: title;
         align-self: start;
@@ -381,12 +418,12 @@
             gap: 5px;
 
             .name {
-              font-size: clamp(1.3rem, 3vw, 1.7rem);
+              font-size: clamp(1rem, 3vw, 1.7rem);
               font-weight: 700;
             }
 
             .role {
-              font-size: clamp(0.9rem, 1.5vw, 1rem);
+              font-size: clamp(0.7rem, 1.5vw, 1rem);
               font-weight: 500;
               color: var(--accent-color-role);
             }
@@ -400,7 +437,7 @@
 
               .location-text {
                 text-align: right;
-                font-size: 0.8rem;
+                font-size: clamp(0.7rem, 1.5vw, 1.2rem);
                 white-space: nowrap;
                 font-weight: 500;
                 color: var(--accent-color-role);
@@ -408,7 +445,7 @@
 
               .location-icon {
                 flex-shrink: 0;
-                font-size: 1.1rem;
+                font-size: clamp(0.8rem, 1.5vw, 1.1rem);
                 color: var(--accent-color-role);
               }
             }
@@ -433,7 +470,7 @@
         }
 
         .motto {
-          font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+          font-size: clamp(0.7rem, 1.5vw, 1rem);
           font-style: italic;
           color: var(--accent-color-role);
 
@@ -450,8 +487,12 @@
         border-radius: 12px;
         background-color: var(--background-container);
 
-        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
         line-height: 1.6;
+        text-align: justify;
+        hyphens: auto;
+        text-justify: inter-character;
+        line-break: loose;
       }
 
       .about-description {
@@ -465,8 +506,12 @@
         flex-direction: column;
         gap: 15px;
 
-        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
         line-height: 1.5;
+        text-align: justify;
+        hyphens: auto;
+        text-justify: inter-character;
+        line-break: loose;
 
         ul {
           list-style-type: disc;
@@ -526,14 +571,14 @@
             }
 
             .highlight-value {
-              font-size: clamp(0.9rem, 1.5vw, 1rem);
-              font-weight: 700;
+              font-size: clamp(0.6rem, 1.5vw, 0.9rem);
+              font-weight: 500;
               text-align: center;
               margin-top: 4px;
             }
 
             .highlight-label {
-              font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+              font-size: clamp(0.5rem, 1.2vw, 0.8rem);
               color: var(--accent-color-role);
               text-transform: uppercase;
               letter-spacing: 1px;
@@ -554,6 +599,11 @@
         flex-direction: column;
         gap: 15px;
 
+        text-align: justify;
+        hyphens: auto;
+        text-justify: inter-character;
+        line-break: loose;
+
         ul {
           list-style-type: disc;
           padding-left: 20px;
@@ -564,7 +614,7 @@
             .philosophy-point {
               font-weight: 500;
               color: var(--accent-color-role);
-              font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+              font-size: clamp(0.7rem, 1.5vw, 1rem);
             }
           }
         }

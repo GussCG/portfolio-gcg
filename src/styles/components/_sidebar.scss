@@ -323,7 +323,8 @@
   @media (max-width: 400px) {
     .sidebar__header {
       .toggle-theme-button {
-        display: none;
+        width: auto;
+        height: auto;
       }
     }
 
@@ -337,7 +338,8 @@
         .nav-link {
           width: auto;
           height: auto;
-          background-color: transparent;
+          background: transparent;
+          backdrop-filter: none;
           padding: 0;
 
           &.active {
