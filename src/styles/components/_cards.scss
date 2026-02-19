@@ -294,5 +294,16 @@
         }
       }
     }
+
+    @media (max-width: 550px) {
+      .education-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .education-logos {
+        display: none;
+      }
+    }
   }
 }

@@ -8,8 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   position: relative;
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
 
   .container {
     width: 100%;
@@ -18,11 +23,10 @@
     flex-direction: column;
 
     h1 {
-      font-size: 3rem;
+      font-size: clamp(2rem, 5vw, 3rem);
       color: var(--accent-color-role);
 
       @media (max-width: 1200px) {
-        font-size: 2rem;
         text-align: center;
       }
     }
@@ -68,19 +72,18 @@
 
   &.home {
     h2 {
-      font-size: 1.5rem;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
       font-weight: 500;
       margin-bottom: 20px;
       color: var(--accent-color-role);
 
       @media (max-width: 1200px) {
-        font-size: 1.2rem;
         text-align: center;
       }
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: clamp(0.95rem, 2vw, 1.2rem);
       font-weight: 300;
       margin: 0 auto 30px auto;
       line-height: 1.5;
@@ -89,17 +92,13 @@
       strong {
         font-weight: 700;
       }
-
-      @media (max-width: 1200px) {
-        font-size: 0.9rem;
-      }
     }
 
     .quick-stats {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      margin-top: 50px;
+      gap: clamp(20px, 4vw, 40px);
+      margin-top: clamp(30px, 5vw, 50px);
 
       .stat {
         display: flex;
@@ -107,18 +106,13 @@
         align-items: center;
 
         .number {
-          font-size: 2rem;
+          font-size: clamp(1.5rem, 4vw, 2rem);
           font-weight: 700;
           text-align: center;
-
-          @media (max-width: 1200px) {
-            font-size: 1.5rem;
-            text-align: center;
-          }
         }
 
         .label {
-          font-size: 0.9rem;
+          font-size: clamp(0.75rem, 1.5vw, 0.9rem);
           font-weight: 500;
           color: var(--accent-color-role);
           text-align: center;
@@ -140,6 +134,15 @@
         justify-content: center;
         align-items: flex-start;
         margin-bottom: 30px;
+
+        @media (max-width: 500px) {
+          align-items: center !important;
+          text-align: center;
+
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
 
         .filters {
           display: flex;
@@ -170,6 +173,22 @@
               box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             }
           }
+
+          @media (max-width: 500px) {
+            overflow-x: auto;
+            padding-bottom: 10px;
+            justify-content: flex-start;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+            scrollbar-width: none;
+
+            button {
+              flex-shrink: 0;
+              white-space: nowrap;
+            }
+          }
         }
 
         @media (max-width: 1200px) {
@@ -186,8 +205,12 @@
         padding-right: 10px;
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
+
+        @media (max-width: 550px) {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }
@@ -320,6 +343,9 @@
           flex-direction: column;
           gap: 20px;
           margin-top: 30px;
+
+          height: auto;
+          overflow-y: visible;
         }
       }
 
@@ -334,7 +360,7 @@
         border: var(--border-container);
         border-radius: 12px;
         background-color: var(--background-container);
-        padding: 20px;
+        padding: clamp(15px, 3vw, 20px);
 
         display: flex;
         flex-direction: column;
@@ -355,12 +381,12 @@
             gap: 5px;
 
             .name {
-              font-size: 1.7rem;
+              font-size: clamp(1.3rem, 3vw, 1.7rem);
               font-weight: 700;
             }
 
             .role {
-              font-size: 1rem;
+              font-size: clamp(0.9rem, 1.5vw, 1rem);
               font-weight: 500;
               color: var(--accent-color-role);
             }
@@ -397,25 +423,22 @@
             .item {
               .name {
                 text-align: center;
-                font-size: 1.3rem;
               }
 
               .role {
                 text-align: center;
-                font-size: 0.9rem;
               }
             }
           }
         }
 
         .motto {
-          font-size: 0.9rem;
+          font-size: clamp(0.8rem, 1.5vw, 0.9rem);
           font-style: italic;
           color: var(--accent-color-role);
 
           @media (max-width: 1200px) {
             text-align: center;
-            font-size: 0.8rem;
           }
         }
       }
@@ -427,7 +450,7 @@
         border-radius: 12px;
         background-color: var(--background-container);
 
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
         line-height: 1.6;
       }
 
@@ -442,7 +465,7 @@
         flex-direction: column;
         gap: 15px;
 
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
         line-height: 1.5;
 
         ul {
@@ -467,12 +490,9 @@
         flex-direction: column;
 
         .badges-container {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: center;
-          gap: 10px;
-          flex: 1;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          gap: 15px;
           width: 100%;
           margin-top: 20px;
 
@@ -483,8 +503,8 @@
             flex: 1;
 
             .icon-wrapper {
-              width: 60px;
-              height: 60px;
+              width: clamp(50px, 8vw, 60px);
+              height: clamp(50px, 8vw, 60px);
               border-radius: 50%;
               background-color: var(--accent-color);
               display: flex;
@@ -500,20 +520,20 @@
               }
 
               .highlight-icon {
-                font-size: 1.5rem;
+                font-size: clamp(1.2rem, 2vw, 1.5rem);
                 color: white;
               }
             }
 
             .highlight-value {
-              font-size: 0.8rem;
+              font-size: clamp(0.9rem, 1.5vw, 1rem);
               font-weight: 700;
               text-align: center;
               margin-top: 4px;
             }
 
             .highlight-label {
-              font-size: 0.75rem;
+              font-size: clamp(0.6rem, 1.2vw, 0.8rem);
               color: var(--accent-color-role);
               text-transform: uppercase;
               letter-spacing: 1px;
@@ -544,7 +564,7 @@
             .philosophy-point {
               font-weight: 500;
               color: var(--accent-color-role);
-              font-size: 0.9rem;
+              font-size: clamp(0.8rem, 1.5vw, 0.9rem);
             }
           }
         }
