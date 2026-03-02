@@ -20,13 +20,41 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 12px;
 
-    h3 {
-      font-size: clamp(0.7rem, 2vw, 0.9rem);
-      color: var(--accent-color-role);
+    .title-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+
+      h3 {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+        color: var(--accent-color-role);
+      }
+
+      .status {
+        font-size: 0.6rem;
+        padding: 4px 10px;
+        border-radius: 20px;
+        background: var(--project-status-bg);
+        color: var(--project-status-color);
+        font-weight: 500;
+
+        &.deployed {
+          background: var(--project-status-deployed-bg);
+          color: var(--project-status-deployed-color);
+        }
+      }
     }
+  }
+
+  .role {
+    font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+    color: var(--color-text);
+    font-weight: 600;
+    opacity: 0.4;
   }
 
   .category {
@@ -139,6 +167,16 @@
       color: $project-link;
       position: relative;
       transition: 0.3s;
+
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        color: $project-link;
+      }
 
       &::after {
         content: "";

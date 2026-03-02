@@ -12,6 +12,7 @@ export const skills = [
       "C++",
       "Dart",
       "PHP",
+      "TypeScript",
     ],
   },
   {
@@ -48,6 +49,7 @@ export const skills = [
       "Microsoft Office",
       "Azure",
       "Unity3D",
+      "PowerBi",
     ],
   },
 ];

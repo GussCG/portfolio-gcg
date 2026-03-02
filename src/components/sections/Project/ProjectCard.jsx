@@ -1,16 +1,19 @@
 import React from "react";
 import Icons from "../../Others/IconProvider";
 
-const { FaTrophy } = Icons;
+const { FaTrophy, FaGithub, FaYoutube, FaMousePointer } = Icons;
 
 function ProjectCard({ project }) {
   const {
     title,
+    status,
+    role,
     description,
     tech,
     highlights,
     demo,
     github,
+    demoVideo,
     category,
     achievements,
   } = project;
@@ -18,9 +21,20 @@ function ProjectCard({ project }) {
   return (
     <div className="project-card">
       <div className="project-header">
-        <h3>{title}</h3>
+        <div className="title-group">
+          <h3>{title}</h3>
+          {status && (
+            <span
+              className={`status ${status.toLowerCase() === "desplegado" ? "deployed" : ""}`}
+            >
+              {status}
+            </span>
+          )}
+        </div>
         <span className={`category ${category.toLowerCase()}`}>{category}</span>
       </div>
+
+      {role && <p className="role">{role}</p>}
 
       <div className="tech-stack">
         {tech.map((item, index) => {
@@ -61,12 +75,30 @@ function ProjectCard({ project }) {
       <div className="project-links">
         {demo && (
           <a href={demo} target="_blank" rel="noreferrer">
-            Demo
+            <FaMousePointer className="demo-icon" /> Ver Demo
           </a>
         )}
-        {github && (
-          <a href={github} target="_blank" rel="noreferrer">
-            GitHub
+        {github &&
+          (Array.isArray(github) ? (
+            github.map((repo, index) => (
+              <a
+                key={index}
+                href={repo.url}
+                target="_blank"
+                rel="noreferrer"
+                title={repo.label}
+              >
+                <FaGithub className="github-icon" /> {repo.version}
+              </a>
+            ))
+          ) : (
+            <a href={github} target="_blank" rel="noreferrer">
+              <FaGithub className="github-icon" /> Ver Código
+            </a>
+          ))}
+        {demoVideo && (
+          <a href={demoVideo} target="_blank" rel="noreferrer">
+            <FaYoutube className="youtube-icon" /> Ver Video
           </a>
         )}
       </div>

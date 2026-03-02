@@ -2,6 +2,8 @@ export const projects = [
   {
     id: 1,
     title: "MusedMX",
+    role: "Líder de Proyecto / Desarrollador Full Stack Principal",
+    status: "Disponible vía video demo",
     description:
       "Plataforma web enfocada en optimizar la exploración cultural en la zona centro de la Ciudad de México mediante recomendaciones personalizadas. El sistema utiliza algoritmos de recomendación basados en preferencias individuales, temáticas de interés, ubicación geográfica (radio de búsqueda) e historial de visitas. La aplicación ofrece una experiencia interactiva con mapas y permite a los usuarios calificar y comentar sus visitas para mejorar las recomendaciones futuras.",
     tech: [
@@ -20,7 +22,7 @@ export const projects = [
       "Implementación de la API de Google Maps para mostrar la ubicación de los museos recomendados y facilitar la navegación.",
       "Sistema de calificación y comentarios para que los usuarios puedan compartir sus experiencias y mejorar las recomendaciones futuras.",
     ],
-    demo: "",
+    demoVideo: "https://youtu.be/8yaSeS1wAI0",
     github: "https://github.com/GussCG/project-musedmx",
     category: "Web",
     achievements: [
@@ -31,6 +33,8 @@ export const projects = [
   {
     id: 2,
     title: "Editor de Diagramas E-R",
+    role: "Desarrollador Full Stack Principal",
+    status: "Desplegado",
     description:
       "Sistema de diseño de diagramas Entidad-Relación con validación y generación de diagrama relacional y exportación a SQL. Integración de ChatIA (Gemini) para asistencia en la creación de diagramas y resolución de dudas técnicas.",
     tech: ["React", "Node.js", "React Flow", "Gemini API"],
@@ -48,22 +52,53 @@ export const projects = [
   {
     id: 3,
     title: "GeoWess",
+    role: "Lider de Proyecto / Desarrollador Full Stack Principal",
+    status: "En migración a React + Typescript + Supabase",
     description:
       "Sistema integral para la gestión y seguimiento eficiente de proyectos de obra pública en la CDMX, diseñado bajo los lineamientos de la Ley de Obras Públicas local. La plataforma permite centralizar el control administrativo, financiero y operativo de las construcciones. Con funcionalidades que incluyen la generación automática de reportes mensuales, cálculo de estimaciones monetarias, control presupuestal y seguimiento de proyectos. Además, cuenta con un sistema multi-rol con permisos dinámicos para garantizar la seguridad y eficiencia en la gestión de los proyectos.",
-    tech: ["Node.js", "Express.js", "Handlebars", "CSS", "MySQL"],
+    tech: [
+      "Node.js",
+      "Express.js",
+      "Handlebars",
+      "CSS",
+      "MySQL",
+      "React",
+      "TypeScript",
+      "Supabase",
+    ],
     highlights: [
       "Generación automática de reportes mensuales",
       "Calculo de estimaciones monetarias",
       "Control presupuestal y seguimiento de proyectos",
       "Sistema multi-rol con permisos dinámicos",
     ],
+    achievements: [
+      "Diseño e implementación de una nueva arquitectura basada en React + TypeScript.",
+      "Proceso de desacoplamiento progresivo entre frontend y backend.",
+      "Integración de Supabase como backend-as-a-service para modernizar la infraestructura.",
+      "Refactorización orientada a mejorar escalabilidad y mantenibilidad del sistema.",
+    ],
+
     demo: "",
-    github: "https://github.com/GussCG/GeoWess/tree/master/src",
+    github: [
+      {
+        label: "Monolito Node.js + Handlebars",
+        version: "Versión Original",
+        url: "https://github.com/GussCG/GeoWess/tree/master",
+      },
+      {
+        label: "Migración React + TypeScript + Supabase",
+        version: "Versión en Progreso",
+        url: "https://github.com/GussCG/geowess-react",
+      },
+    ],
     category: "Web",
   },
   {
     id: 4,
     title: "NBA.GG API",
+    role: "Desarrollador Backend Principal / Arquitecto de Software / Analista de Datos",
+    status: "API Privada",
     description:
       "API REST desarrollada en Python utilizando FastAPI que consume datos oficiales de la NBA para generar estadísticas avanzadas y predicciones de resultados de partidos mediante un modelo predictivo. El sistema está diseñado para integrarse fácilmente con aplicaciones web o móviles, proporcionando endpoints estructurados y documentados. Implementación de modelo estadístico para predicción basada en métricas históricas.",
     tech: ["Python", "FastAPI", "Uvicorn"],
@@ -73,12 +108,14 @@ export const projects = [
       "Arquitectura RESTful para facilitar la integración con aplicaciones de terceros.",
     ],
     demo: "",
-    github: "https://github.com/GussCG/nba-gg",
+    github: "https://github.com/GussCG/nba-gg/tree/master",
     category: "Backend",
   },
   {
     id: 5,
     title: "QuizUp",
+    role: "Desarrollador Frontend Principal / Desarrollador Backend Principal",
+    status: "MVP funcional",
     description:
       "Aplicación móvil de trivia con múltiples categorías y niveles de dificultad. Permite a los usuarios participar en juegos de preguntas y respuestas, con un sistema de puntuación y ranking. La aplicación incluye autenticación de usuarios, gestión de perfiles y persistencia de records y estadísticas en la nube. Desarrollada con Flutter y Dart, utilizando Supabase para la autenticación y gestión de datos, e integrando una API REST para obtener preguntas de trivia actualizadas y dinámicas.",
     tech: ["Flutter", "Dart", "Supabase", "API REST"],

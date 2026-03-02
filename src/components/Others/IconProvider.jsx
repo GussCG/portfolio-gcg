@@ -41,6 +41,9 @@ import SQLIcon from "../../assets/icons/sql.svg?react";
 import CIcon from "../../assets/icons/c.svg?react";
 import CSharpIcon from "../../assets/icons/csharp.svg?react";
 import CPlusPlusIcon from "../../assets/icons/cplusplus.svg?react";
+import { SiTypescript } from "react-icons/si";
+import { FaYoutube } from "react-icons/fa";
+import { FaMousePointer } from "react-icons/fa";
 
 // Educacion
 import IPNLogo from "../../assets/icons/ipn.svg?react";
@@ -104,6 +107,9 @@ const Icons = {
   GraduationCap: FaGraduationCap,
   Award: FaAward,
   Calendar: FaCalendar,
+  TypeScript: SiTypescript,
+  FaYoutube,
+  FaMousePointer,
 };
 
 export default Icons;
