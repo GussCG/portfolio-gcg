@@ -13,6 +13,7 @@ export const skills = [
       "Dart",
       "PHP",
       "TypeScript",
+      "CSS",
     ],
   },
   {
@@ -31,6 +32,7 @@ export const skills = [
       "Gemini API",
       "Scikit-learn",
       "Uvicorn",
+      "Spring Boot",
     ],
   },
   {

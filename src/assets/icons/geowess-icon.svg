@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.89 17.63">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: currentColor;
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <path class="cls-2" d="M8.17,14.66c-1.1,0-2.06-.18-2.88-.55-.82-.37-1.51-.86-2.06-1.48s-.96-1.31-1.24-2.09c-.28-.78-.41-1.57-.41-2.38s.14-1.61.42-2.39c.28-.78.7-1.48,1.25-2.1.55-.62,1.25-1.12,2.09-1.49.83-.37,1.81-.56,2.92-.56.88,0,1.64.11,2.27.33.63.22,1.16.5,1.59.85.42.35.76.72,1.02,1.11.26.39.45.76.58,1.11.13.35.24.74.33,1.18h-3.26c-.13-.35-.28-.63-.46-.84-.18-.22-.43-.41-.76-.59-.33-.17-.77-.26-1.32-.26-.72,0-1.33.17-1.81.52-.49.35-.85.8-1.1,1.35-.25.55-.37,1.13-.37,1.73s.13,1.2.38,1.76.63,1.03,1.12,1.39c.5.36,1.11.54,1.85.54s1.3-.16,1.72-.49c.43-.33.71-.76.85-1.29h-2.97v-2.54h6.25v1.05c0,1.34-.26,2.47-.77,3.38-.52.92-1.22,1.6-2.12,2.07s-1.94.7-3.12.7Z"/>
+      <rect class="cls-1" x=".5" y="6.76" width="2.1" height="2.1" rx=".28" ry=".28" transform="translate(-6.26 9.36) rotate(-90)"/>
+      <rect class="cls-1" x="2.28" y="11.31" width="2.1" height="2.1" rx=".28" ry=".28" transform="translate(-3.05 23.46) rotate(-135)"/>
+      <rect class="cls-1" x="6.76" y="13.27" width="2.1" height="2.1" rx=".28" ry=".28" transform="translate(15.62 28.64) rotate(-180)"/>
+      <rect class="cls-1" x="11.49" y="2.46" width="2.1" height="2.1" rx=".28" ry=".28" transform="translate(6.15 -7.84) rotate(45)"/>
+      <rect class="cls-1" x="7.01" y=".5" width="2.1" height="2.1" rx=".28" ry=".28"/>
+      <rect class="cls-1" x="2.46" y="2.28" width="2.1" height="2.1" rx=".28" ry=".28" transform="translate(-1.33 3.46) rotate(-45)"/>
+    </g>
+    <path class="cls-2" d="M14.29,17.63l-2.47-10.15h2.36l1.69,7.09,1.77-7.09h2.44l1.77,7.09,1.69-7.09h2.36l-2.47,10.15h-3.09l-1.48-6.02-1.48,6.02h-3.09Z"/>
+  </g>
+</svg>

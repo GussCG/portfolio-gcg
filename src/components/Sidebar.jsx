@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
@@ -27,6 +28,8 @@ function Sidebar() {
   const location = useLocation();
   const { toggleTheme, theme } = useTheme();
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const routeImgs = {
     "/": homeImg,
     "/projects": projectsImg,
@@ -49,6 +52,7 @@ function Sidebar() {
             <motion.img
               key={location.pathname}
               src={profileImg}
+              onLoad={() => setIsLoaded(true)}
               alt="Gustavo Cerda García"
               className="profile-image"
               initial={{
@@ -58,7 +62,7 @@ function Sidebar() {
               }}
               animate={{
                 y: 0,
-                opacity: 1,
+                opacity: isLoaded ? 1 : 0,
                 filter: "blur(0px), drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
               }}
               exit={{
@@ -67,6 +71,7 @@ function Sidebar() {
                 filter: "blur(8px), drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
               }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
+              loading="lazy"
             />
           </AnimatePresence>
         </div>

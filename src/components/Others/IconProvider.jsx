@@ -44,6 +44,9 @@ import CPlusPlusIcon from "../../assets/icons/cplusplus.svg?react";
 import { SiTypescript } from "react-icons/si";
 import { FaYoutube } from "react-icons/fa";
 import { FaMousePointer } from "react-icons/fa";
+import { SiSpringboot } from "react-icons/si";
+import { SiCloudinary } from "react-icons/si";
+import { IoNotifications } from "react-icons/io5";
 
 // Educacion
 import IPNLogo from "../../assets/icons/ipn.svg?react";
@@ -58,6 +61,12 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
 import { FaAward } from "react-icons/fa6";
 import { FaCalendar } from "react-icons/fa6";
+
+// Proyectos Iconos
+import MusedMXIcon from "../../assets/icons/musedmx-icon.svg?react";
+// import EditorERIcon from "../../assets/icons/editor-er.svg?react";
+import QuizUpIcon from "../../assets/icons/quizup-icon.svg?react";
+import GeoWessIcon from "../../assets/icons/geowess-icon.svg?react";
 
 const Icons = {
   FaGithub,
@@ -110,6 +119,13 @@ const Icons = {
   TypeScript: SiTypescript,
   FaYoutube,
   FaMousePointer,
+  "Spring Boot": SiSpringboot,
+  Cloudinary: SiCloudinary,
+  "Local Notifications": IoNotifications,
+  MusedMX: MusedMXIcon,
+  // "Editor de Diagramas E-R": EditorERIcon,
+  QuizUp: QuizUpIcon,
+  GeoWess: GeoWessIcon,
 };
 
 export default Icons;

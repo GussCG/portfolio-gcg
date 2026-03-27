@@ -16,13 +16,22 @@ function ProjectCard({ project }) {
     demoVideo,
     category,
     achievements,
+    icon,
   } = project;
 
   return (
     <div className="project-card">
       <div className="project-header">
         <div className="title-group">
-          <h3>{title}</h3>
+          <div className="title-w-icon">
+            {icon && (
+              <span className="project-icon">
+                {Icons[icon] ? React.createElement(Icons[icon]) : null}
+              </span>
+            )}
+            <h3>{title}</h3>
+          </div>
+
           {status && (
             <span
               className={`status ${status.toLowerCase() === "desplegado" ? "deployed" : ""}`}

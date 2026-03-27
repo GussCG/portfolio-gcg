@@ -29,6 +29,7 @@ export const projects = [
       "Calificación final de 10/10 con mención honorífica en el Trabajo Terminal de la carrera de Ingeniería en Sistemas Computacionales en la EScom-IPN.",
       "Presentación del proyecto en el Congreso Internacional CAECH 2025.",
     ],
+    icon: "MusedMX",
   },
   {
     id: 2,
@@ -93,6 +94,7 @@ export const projects = [
       },
     ],
     category: "Web",
+    icon: "GeoWess",
   },
   {
     id: 4,
@@ -129,5 +131,35 @@ export const projects = [
     demo: null,
     github: "https://github.com/GussCG/quizup",
     category: "Mobile",
+    // icon: "QuizUp",
+  },
+  {
+    id: 6,
+    title: "MusedMX Mobile",
+    role: "Líder de Desarrollo Mobile",
+    status: "En desarrollo",
+    description:
+      "Evolución integral del sistema MusedMX hacia una plataforma móvil nativa. El proyecto redefine la interacción usuario-museo mediante el aprovechamiento de sensores locales, geofencing y una arquitectura de micro-interacciones diseñada específicamente para la movilidad.",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Node.js",
+      "MySQL",
+      "Cloudinary",
+      "API de Google Maps",
+      "Local Notifications",
+    ],
+    highlights: [
+      "Transposición de la plataforma Web (MusedMX) a un ecosistema móvil, optimizando la arquitectura de datos para consumo en redes celulares.",
+      "Diseño y consumo de una API REST unificada, permitiendo la interoperabilidad entre las plataformas Web y Mobile mediante una base de datos centralizada en MySQL.",
+      "Implementación de 'Pasaporte de Museos': un sistema de gamificación que permite a los usuarios registrar visitas y coleccionar sellos digitales mediante geolocalización.",
+      "Desarrollo de un servicio de Notificaciones de Proximidad (Geofencing) que alerta al usuario cuando se encuentra en el radio de influencia de un recinto cultural.",
+      "Optimización de carga multimedia mediante una migración estratégica a Cloudinary y renderizado de galerías tipo 'Stories' con caching avanzado.",
+      "Interfaz de usuario enriquecida con Skeleton Loading y Hero Animations para garantizar una experiencia 'Seamless' de 60 FPS.",
+    ],
+    demo: null,
+    github: "https://github.com/GussCG/musedmx-mobile",
+    category: "Mobile",
+    icon: "MusedMX",
   },
 ];

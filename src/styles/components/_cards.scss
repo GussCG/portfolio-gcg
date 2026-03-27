@@ -29,9 +29,30 @@
       align-items: flex-start;
       gap: 4px;
 
-      h3 {
-        font-size: clamp(0.7rem, 2vw, 0.9rem);
-        color: var(--accent-color-role);
+      .title-w-icon {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        h3 {
+          font-size: clamp(0.7rem, 2vw, 0.9rem);
+          color: var(--accent-color-role);
+        }
+
+        .project-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.8;
+          padding: 8px 0;
+
+          svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-color-role);
+            fill: var(--accent-color-role);
+          }
+        }
       }
 
       .status {
