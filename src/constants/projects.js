@@ -48,6 +48,7 @@ export const projects = [
     demo: "https://app-der.vercel.app/",
     github: "https://github.com/GussCG/app-der",
     category: "Web",
+    icon: "FaRocket",
   },
 
   {
@@ -112,6 +113,7 @@ export const projects = [
     demo: "",
     github: "https://github.com/GussCG/nba-gg/tree/master",
     category: "Backend",
+    icon: "FaRocket",
   },
   {
     id: 5,
@@ -131,7 +133,7 @@ export const projects = [
     demo: null,
     github: "https://github.com/GussCG/quizup",
     category: "Mobile",
-    // icon: "QuizUp",
+    icon: "FaRocket",
   },
   {
     id: 6,

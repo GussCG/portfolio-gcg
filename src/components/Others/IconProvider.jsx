@@ -3,7 +3,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 import { FaUserCircle } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
-import { FaRocket, FaT } from "react-icons/fa6";
+import { FaC, FaRocket, FaT } from "react-icons/fa6";
 import { FaCircleInfo } from "react-icons/fa6";
 import { LuCpu } from "react-icons/lu";
 import { IoSchool } from "react-icons/io5";

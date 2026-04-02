@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <section className="section home">
@@ -30,9 +32,9 @@ function Home() {
         </div>
 
         <div className="buttons">
-          <a href="/projects" className="btn primary">
+          <Link to="/projects" className="btn primary">
             Ver Proyectos
-          </a>
+          </Link>
           <a
             href="/Gustavo_Cerda_CV_2026.pdf"
             className="btn secondary"
