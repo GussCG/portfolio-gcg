@@ -1,0 +1,355 @@
+{
+  "ui": {
+    "lang": "Idioma",
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "mobileWarning": {
+    "title": "Pronto version para móviles",
+    "description": "Estamos trabajando en una version optimizada para dispositivos móviles. Por favor, visita el sitio desde una computadora para una mejor experiencia."
+  },
+  "sidebar": {
+    "profileRole": "FullStack Developer",
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "education": "Educación",
+      "about": "Sobre mi",
+      "contact": "Contacto"
+    }
+  },
+  "home": {
+    "title": "Hola, soy Gustavo Cerda",
+    "subtitle": "FullStack Developer",
+    "description": "Ingeniero en Sistemas Computacionales (en proceso de titulación) de la ESCOM-IPN enfocado en el desarrollo de aplicaciones web funcionales y escalables. Me especializo en cubrir todo el ciclo de vida de un proyecto, desde el análisis y diseño UX/UI hasta la implementación de APIs robustas y bases de datos. Mi objetivo es transformar ideas complejas en soluciones técnicas eficientes.",
+    "stats": [
+      {
+        "number": "+5",
+        "label": "años de formación técnica"
+      },
+      {
+        "number": "10/10",
+        "label": "calificación del Trabajo Terminal"
+      },
+      {
+        "number": "FullStack",
+        "label": "JS, React, Node.js, SQL y mas"
+      }
+    ],
+    "actions": {
+      "projects": "Ver proyectos",
+      "downloadCv": "Descargar CV"
+    }
+  },
+  "about": {
+    "sectionTitle": "Sobre mi",
+    "summaryTitle": "Resumen",
+    "descriptionTitle": "Descripción",
+    "highlightsTitle": "Logros destacados",
+    "philosophyTitle": "Filosofía de trabajo",
+    "profile": {
+      "name": "Gustavo Cerda Garcia",
+      "role": [
+        "Ingeniero en Sistemas Computacionales",
+        "Desarrollador Full Stack"
+      ],
+      "location": "Ciudad de Mexico, Mexico",
+      "motto": "Disciplina, liderazgo técnico y aprendizaje continuo basado en documentación oficial."
+    },
+    "summary": "Desarrollador Full Stack egresado de la ESCOM-IPN con experiencia liderando proyectos de arquitectura completa, desde el análisis de requerimientos hasta el despliegue. Especializado en transformar lógica compleja en soluciones funcionales mediante React, Node.js y bases de datos relacionales. Me destaco por mi rápida adaptabilidad técnica, código limpio y capacidad para gestionar el ciclo de vida del software priorizando siempre la experiencia del usuario y la escalabilidad del sistema.",
+    "description": [
+      "Soy un ingeniero caracterizado por una disciplina constante y un orden riguroso en cada proyecto que emprendo. Desde mi formación técnica en el CECyT 8 hasta concluir mi ingeniería en la ESCOM con mención honorifica, he mantenido un compromiso total con la excelencia académica y profesional.",
+      "Poseo una alta capacidad de autoaprendizaje y adaptabilidad técnica. Mi metodología se basa en el análisis profundo de la documentación oficial de librerías y frameworks, lo que me permite dominar nuevas tecnologías y entregar resultados de alta calidad en tiempos reducidos.",
+      "Naturalmente asumo roles de liderazgo en equipos de desarrollo, donde mi enfoque es liderar con el ejemplo. Soy el primero en profundizar en las tareas técnicas más complejas para asegurar que el equipo alcance sus objetivos, garantizando siempre la escalabilidad y el código limpio."
+    ],
+    "highlights": [
+      {
+        "label": "Promedio general",
+        "value": "9.0 / 10",
+        "icon": "GraduationCap"
+      },
+      {
+        "label": "Mención honorifica",
+        "value": "Trabajo Terminal 10/10",
+        "icon": "Award"
+      },
+      {
+        "label": "Estatus",
+        "value": "Egresado (titulación en proceso)",
+        "icon": "Calendar"
+      }
+    ],
+    "philosophy": [
+      "Aprendizaje profundo a partir de documentación oficial.",
+      "Liderazgo operativo en proyectos técnicos.",
+      "Resolución estructurada de problemas complejos.",
+      "Enfoque en código limpio y escalabilidad."
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "items": [
+      {
+        "id": 1,
+        "institution": "Instituto Politecnico Nacional - Escuela Superior de Computo",
+        "degree": "Ingeniería en Sistemas Computacionales",
+        "period": "2020 - 2026",
+        "status": "Egresado (en proceso de titulación)",
+        "grade": "Promedio: 9.0 / 10",
+        "logos": ["IPN", "ESCOM"]
+      },
+      {
+        "id": 2,
+        "institution": "Instituto Politecnico Nacional - CECyT 8 Narciso Bassols",
+        "degree": "Técnico en Computación",
+        "period": "2017 - 2020",
+        "status": "Egresado",
+        "logos": ["IPN", "CECyT8"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos destacados",
+    "filters": [
+      { "key": "All", "label": "Todos" },
+      { "key": "Web", "label": "Web" },
+      { "key": "Backend", "label": "Backend" },
+      { "key": "Mobile", "label": "Mobile" }
+    ],
+    "actions": {
+      "viewDemo": "Ver demo",
+      "viewCode": "Ver codigo",
+      "viewVideo": "Ver video"
+    },
+    "cards": [
+      {
+        "id": 1,
+        "title": "MusedMX",
+        "role": "Líder de Proyecto / Desarrollador Full Stack Principal",
+        "status": "Disponible via video demo",
+        "statusType": "normal",
+        "description": "Plataforma web enfocada en optimizar la exploración cultural en la zona centro de la Ciudad de Mexico mediante recomendaciones personalizadas. El sistema utiliza algoritmos de recomendación basados en preferencias individuales, temáticas de interés, ubicación geográfica (radio de búsqueda) e historial de visitas.",
+        "tech": [
+          "Node.js",
+          "Express.js",
+          "React",
+          "SASS",
+          "MySQL",
+          "Scikit-learn",
+          "API de Google Maps"
+        ],
+        "highlights": [
+          "Sistema de recomendación de museos de la Ciudad de Mexico basado en preferencias del usuario, ubicación e historial de visitas.",
+          "Integración de un algoritmo de recomendación utilizando Scikit-learn para ofrecer sugerencias personalizadas.",
+          "Interfaz de usuario interactiva con React y SASS para una experiencia fluida.",
+          "Implementación de la API de Google Maps para mostrar la ubicación de los museos recomendados y facilitar la navegación.",
+          "Sistema de calificación y comentarios para mejorar recomendaciones futuras."
+        ],
+        "demoVideo": "https://youtu.be/8yaSeS1wAI0",
+        "github": "https://github.com/GussCG/project-musedmx",
+        "category": "Web",
+        "achievements": [
+          "Calificación final de 10/10 con mención honorífica en el Trabajo Terminal de la carrera de Ingeniería en Sistemas Computacionales en la EScom-IPN.",
+          "Presentación del proyecto en el Congreso Internacional CAECH 2025."
+        ],
+        "icon": "MusedMX"
+      },
+      {
+        "id": 2,
+        "title": "Editor de Diagramas E-R",
+        "role": "Desarrollador Full Stack Principal",
+        "status": "Desplegado",
+        "statusType": "deployed",
+        "description": "Sistema de diseño de diagramas Entidad-Relación con validación y generación de diagrama relacional y exportación a SQL. Integración de ChatIA (Gemini) para asistencia en la creación de diagramas y resolución de dudas técnicas.",
+        "tech": ["React", "Node.js", "React Flow", "Gemini API"],
+        "highlights": [
+          "Validación de diagramas E-R con reglas de integridad referencial.",
+          "Interfaz intuitiva para diseñar diagramas E-R.",
+          "Generación automática de código SQL a partir de los diagramas.",
+          "Implementación de ChatIA (Gemini) para asistencia técnica."
+        ],
+        "demo": "https://app-der.vercel.app/",
+        "github": "https://github.com/GussCG/app-der",
+        "category": "Web",
+        "icon": "FaRocket"
+      },
+      {
+        "id": 3,
+        "title": "GeoWess",
+        "role": "íder de Proyecto / Desarrollador Full Stack Principal",
+        "status": "En migración a React + TypeScript + Supabase",
+        "statusType": "normal",
+        "description": "Sistema integral para la gestión y seguimiento eficiente de proyectos de obra publica en la CDMX. Centraliza control administrativo, financiero y operativo con reportes mensuales, calculo de estimaciones y control presupuestal.",
+        "tech": [
+          "Node.js",
+          "Express.js",
+          "Handlebars",
+          "CSS",
+          "MySQL",
+          "React",
+          "TypeScript",
+          "Supabase"
+        ],
+        "highlights": [
+          "Generación automática de reportes mensuales.",
+          "Calculo de estimaciones monetarias.",
+          "Control presupuestal y seguimiento de proyectos.",
+          "Sistema multi-rol con permisos dinámicos."
+        ],
+        "achievements": [
+          "Diseño e implementación de una nueva arquitectura basada en React + TypeScript.",
+          "Desacoplamiento progresivo entre frontend y backend.",
+          "Integración de Supabase como backend-as-a-service.",
+          "Refactorización para mejorar escalabilidad y mantenibilidad."
+        ],
+        "github": [
+          {
+            "label": "Monolito Node.js + Handlebars",
+            "version": "Version original",
+            "url": "https://github.com/GussCG/GeoWess/tree/master"
+          },
+          {
+            "label": "Migración React + TypeScript + Supabase",
+            "version": "Version en progreso",
+            "url": "https://github.com/GussCG/geowess-react"
+          }
+        ],
+        "category": "Web",
+        "icon": "GeoWess"
+      },
+      {
+        "id": 4,
+        "title": "NBA.GG API",
+        "role": "Desarrollador Backend Principal / Arquitecto de Software / Analista de Datos",
+        "status": "API privada",
+        "statusType": "normal",
+        "description": "API REST desarrollada en Python con FastAPI que consume datos oficiales de la NBA para generar estadísticas avanzadas y predicciones de resultados.",
+        "tech": ["Python", "FastAPI", "Uvicorn"],
+        "highlights": [
+          "Consumo de datos en tiempo real de la NBA.",
+          "Modelo predictivo para pronosticar resultados de partidos.",
+          "Arquitectura RESTful para integración con terceros."
+        ],
+        "github": "https://github.com/GussCG/nba-gg/tree/master",
+        "category": "Backend",
+        "icon": "Basketball"
+      },
+      {
+        "id": 5,
+        "title": "QuizUp",
+        "role": "Desarrollador Frontend Principal / Desarrollador Backend Principal",
+        "status": "MVP funcional",
+        "statusType": "normal",
+        "description": "Aplicación móvil de trivia con multiples categorías y niveles de dificultad. Incluye autenticación, gestión de perfiles y persistencia de estadísticas en la nube.",
+        "tech": ["Flutter", "Dart", "Supabase", "API REST"],
+        "highlights": [
+          "App móvil de trivia con categorías y dificultades.",
+          "Autenticación y gestión de usuarios con Supabase.",
+          "Integración de API REST para preguntas dinámicas.",
+          "Persistencia de records y estadísticas.",
+          "Arquitectura móvil multiplataforma."
+        ],
+        "github": "https://github.com/GussCG/quizup",
+        "category": "Mobile",
+        "icon": "FaRocket"
+      },
+      {
+        "id": 6,
+        "title": "MusedMX Mobile",
+        "role": "Líder de Desarrollo Mobile",
+        "status": "En desarrollo",
+        "statusType": "normal",
+        "description": "Evolución de MusedMX hacia una plataforma móvil nativa con geofencing, sensores locales y micro-interacciones para movilidad.",
+        "tech": [
+          "Flutter",
+          "Dart",
+          "Node.js",
+          "MySQL",
+          "Cloudinary",
+          "API de Google Maps",
+          "Local Notifications"
+        ],
+        "highlights": [
+          "Transposición de plataforma web a ecosistema móvil.",
+          "API REST unificada entre Web y Mobile.",
+          "Pasaporte de Museos con geolocalización.",
+          "Notificaciones de proximidad con geofencing.",
+          "Optimización multimedia con Cloudinary.",
+          "UI con Skeleton Loading y Hero Animations."
+        ],
+        "github": "https://github.com/GussCG/musedmx-mobile",
+        "category": "Mobile",
+        "icon": "MusedMX"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "labels": {
+      "mainEmail": "Email principal",
+      "altEmail": "Email alternativo"
+    },
+    "availability": ["Remoto", "Hibrido", "Presencial"]
+  },
+  "skills": {
+    "title": "Skills tecnicas",
+    "groups": [
+      {
+        "category": "Lenguajes",
+        "useIcons": true,
+        "items": [
+          "JavaScript",
+          "Python",
+          "SQL",
+          "Java",
+          "C",
+          "C#",
+          "C++",
+          "Dart",
+          "PHP",
+          "TypeScript",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Frameworks y librerías",
+        "useIcons": true,
+        "items": [
+          "React",
+          "Node.js",
+          "Express.js",
+          "SASS",
+          "Handlebars",
+          "Flutter",
+          "FastAPI",
+          "React Flow",
+          "API de Google Maps",
+          "Gemini API",
+          "Scikit-learn",
+          "Uvicorn",
+          "Spring Boot"
+        ]
+      },
+      {
+        "category": "Bases de datos",
+        "useIcons": true,
+        "items": ["MySQL", "PostgreSQL", "Supabase"]
+      },
+      {
+        "category": "Otras competencias",
+        "useIcons": false,
+        "items": [
+          "UX/UI",
+          "APIs REST",
+          "Git y GitHub",
+          "Scrum",
+          "Microsoft Office",
+          "Azure",
+          "Unity3D",
+          "PowerBi"
+        ]
+      }
+    ]
+  }
+}

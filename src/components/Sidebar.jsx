@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "../context/ThemeContext";
 import Icons from "./Others/IconProvider";
 import homeImg from "../assets/me/homeImg.png";
@@ -27,6 +28,7 @@ const {
 function Sidebar() {
   const location = useLocation();
   const { toggleTheme, theme } = useTheme();
+  const { t, i18n } = useTranslation();
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -41,12 +43,49 @@ function Sidebar() {
 
   const profileImg = routeImgs[location.pathname] || homeImg;
 
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <aside className="sidebar">
       <div className="sidebar__header">
-        <button className="toggle-theme-button" onClick={toggleTheme}>
-          {theme === "light" ? <MdNightlightRound /> : <MdLightMode />}
-        </button>
+        <div className="header-top">
+          <div className="lang-switch">
+            <span className="lang-label">ES</span>
+
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={i18n.resolvedLanguage === "en"}
+                onChange={(e) => changeLanguage(e.target.checked ? "en" : "es")}
+              />
+              <span className="slider"></span>
+            </label>
+
+            <span className="lang-label">EN</span>
+          </div>
+
+          {/* <div className="lang-switch" aria-label={t("ui.lang")}>
+            <button
+              className={i18n.resolvedLanguage === "es" ? "active" : ""}
+              onClick={() => changeLanguage("es")}
+              type="button"
+            >
+              {t("ui.spanish")}
+            </button>
+            <button
+              className={i18n.resolvedLanguage === "en" ? "active" : ""}
+              onClick={() => changeLanguage("en")}
+              type="button"
+            >
+              {t("ui.english")}
+            </button>
+          </div> */}
+          <button className="toggle-theme-button" onClick={toggleTheme}>
+            {theme === "light" ? <MdNightlightRound /> : <MdLightMode />}
+          </button>
+        </div>
         <div className="profile-image-wrapper">
           <AnimatePresence mode="wait">
             <motion.img
@@ -76,7 +115,7 @@ function Sidebar() {
           </AnimatePresence>
         </div>
         <h2 className="profile-name">Gustavo Cerda García</h2>
-        <p className="profile-role">FullStack Developer</p>
+        <p className="profile-role">{t("sidebar.profileRole")}</p>
       </div>
 
       <nav className="sidebar__nav">
@@ -89,7 +128,7 @@ function Sidebar() {
               }
             >
               <IoHome className="nav-icon" />
-              <span>Inicio</span>
+              <span>{t("sidebar.nav.home")}</span>
             </NavLink>
           </li>
           <li>
@@ -100,7 +139,7 @@ function Sidebar() {
               }
             >
               <FaRocket className="nav-icon" />
-              <span>Proyectos</span>
+              <span>{t("sidebar.nav.projects")}</span>
             </NavLink>
           </li>
           <li>
@@ -111,7 +150,7 @@ function Sidebar() {
               }
             >
               <LuCpu className="nav-icon" />
-              <span>Habilidades</span>
+              <span>{t("sidebar.nav.skills")}</span>
             </NavLink>
           </li>
           <li>
@@ -122,7 +161,7 @@ function Sidebar() {
               }
             >
               <IoSchool className="nav-icon" />
-              <span>Educación</span>
+              <span>{t("sidebar.nav.education")}</span>
             </NavLink>
           </li>
           <li>
@@ -133,7 +172,7 @@ function Sidebar() {
               }
             >
               <FaCircleInfo className="nav-icon" />
-              <span>Sobre mí</span>
+              <span>{t("sidebar.nav.about")}</span>
             </NavLink>
           </li>
           <li>
@@ -144,7 +183,7 @@ function Sidebar() {
               }
             >
               <IoMail className="nav-icon" />
-              <span>Contacto</span>
+              <span>{t("sidebar.nav.contact")}</span>
             </NavLink>
           </li>
         </ul>

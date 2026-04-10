@@ -1,12 +1,15 @@
 import React from "react";
-import { skills } from "../../../constants/skills";
+import { useTranslation } from "react-i18next";
 import Icons from "../../Others/IconProvider";
 
 function Skills() {
+  const { t } = useTranslation();
+  const skills = t("skills.groups", { returnObjects: true });
+
   return (
     <section className="section skills" id="skills">
       <div className="container">
-        <h1>Skills Técnicas</h1>
+        <h1>{t("skills.title")}</h1>
 
         <div className="skills-grid">
           {skills.map((group, index) => (
@@ -18,7 +21,6 @@ function Skills() {
               <div className="skills-list">
                 {group.items.map((item, i) => {
                   const Icon = Icons[item];
-                  console.log(item, Icon);
 
                   return (
                     <span

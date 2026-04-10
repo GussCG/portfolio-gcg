@@ -33,6 +33,69 @@
     padding: 20px;
     text-align: center;
 
+    .header-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-direction: row-reverse;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .lang-label {
+        font-size: 0.875rem;
+        color: var(--accent-color-role);
+        font-weight: 500;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          &:checked + .slider {
+            &::before {
+              transform: translateX(20px);
+            }
+          }
+        }
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background: var(--button-secondary-bg);
+        border: var(--border-button);
+        border-radius: 999px;
+        transition: all 0.25s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 14px;
+          width: 14px;
+          left: 2px;
+          top: 2px;
+          background: var(--button-secondary-color);
+          border-radius: 50%;
+
+          transition: all 0.25s ease;
+        }
+      }
+    }
+
     .profile-image-wrapper {
       width: 250px;
       height: 250px;
@@ -54,7 +117,7 @@
     .profile-name {
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--accent-text-strong);
+      color: var(--accent-text);
       margin-bottom: 6px;
     }
 
@@ -65,9 +128,6 @@
     }
 
     .toggle-theme-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
       background: none;
       border: none;
       cursor: pointer;
@@ -101,6 +161,7 @@
 
         padding: 14px 20px;
         border-radius: 12px;
+        border: var(--border-button);
 
         font-weight: 500;
         text-decoration: none;
@@ -126,6 +187,7 @@
           );
           color: #fff;
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+          border: 1px solid var(--accent-gradient-strong);
 
           .nav-icon {
             opacity: 1;
@@ -157,6 +219,7 @@
 
       padding: 10px 16px;
       border-radius: 10px;
+      border: var(--border-button);
 
       text-decoration: none;
       font-size: 0.9rem;
@@ -176,6 +239,7 @@
         color: white;
         transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        border: var(--border-button);
       }
 
       svg {
@@ -198,6 +262,24 @@
       min-height: auto;
       padding: 15px 5px;
 
+      .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        .lang-switch {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+
+          .lang-label {
+            font-size: 0.75rem;
+            text-align: center;
+          }
+        }
+      }
+
       .profile-image-wrapper,
       .profile-name,
       .profile-role {
@@ -205,6 +287,11 @@
       }
 
       .toggle-theme-button {
+        position: static;
+        margin-bottom: 10px;
+      }
+
+      .lang-switch {
         position: static;
         margin-bottom: 10px;
       }
@@ -276,6 +363,12 @@
       min-height: auto;
       padding: 0;
 
+      .header-top {
+        .lang-switch {
+          flex-direction: row;
+        }
+      }
+
       .profile-image-wrapper,
       .profile-name,
       .profile-role {
@@ -285,6 +378,10 @@
       .toggle-theme-button {
         position: static;
         margin: 0;
+      }
+
+      .lang-switch {
+        position: static;
       }
     }
 
@@ -320,7 +417,7 @@
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 473px) {
     .sidebar__header {
       .toggle-theme-button {
         width: auto;

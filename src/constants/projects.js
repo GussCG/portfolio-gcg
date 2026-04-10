@@ -112,6 +112,7 @@ export const projects = [
     demo: "",
     github: "https://github.com/GussCG/nba-gg/tree/master",
     category: "Backend",
+    icon: "Basketball",
   },
   {
     id: 5,

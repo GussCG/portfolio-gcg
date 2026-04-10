@@ -1,44 +1,36 @@
+import { useTranslation } from "react-i18next";
+
 function Home() {
+  const { t } = useTranslation();
+  const stats = t("home.stats", { returnObjects: true });
+
   return (
     <section className="section home">
       <div className="container">
-        <h1>Hola, Soy Gustavo Cerda</h1>
-        <h2>FullStack Developer</h2>
+        <h1>{t("home.title")}</h1>
+        <h2>{t("home.subtitle")}</h2>
 
-        <p>
-          Ingeniero en Sistemas Computacionales (en proceso de titulación) de la{" "}
-          <strong>ESCOM-IPN</strong> enfocado en el desarrollo de aplicaciones
-          web funcionales y escalables. Me especializo en cubrir todo el ciclo
-          de vida de un proyecto, desde el análisis y diseño UX/UI hasta la
-          implementación de APIs robustas y bases de datos. Mi objetivo es
-          transformar ideas complejas en soluciones técnicas eficientes.
-        </p>
+        <p>{t("home.description")}</p>
 
         <div className="quick-stats">
-          <div className="stat">
-            <strong className="number">+5</strong>{" "}
-            <span className="label">años de formación técnica</span>
-          </div>
-          <div className="stat">
-            <strong className="number">10/10</strong>
-            <span className="label">calificación del Trabajo Terminal</span>
-          </div>
-          <div className="stat">
-            <strong className="number">FullStack</strong>
-            <span className="label">JS, React, Node.js, SQL y más</span>
-          </div>
+          {stats.map((stat, index) => (
+            <div className="stat" key={index}>
+              <strong className="number">{stat.number}</strong>
+              <span className="label">{stat.label}</span>
+            </div>
+          ))}
         </div>
 
         <div className="buttons">
           <a href="/projects" className="btn primary">
-            Ver Proyectos
+            {t("home.actions.projects")}
           </a>
           <a
             href="/Gustavo_Cerda_CV_2026.pdf"
             className="btn secondary"
             download
           >
-            Descargar CV
+            {t("home.actions.downloadCv")}
           </a>
         </div>
       </div>

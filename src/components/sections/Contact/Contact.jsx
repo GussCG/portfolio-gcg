@@ -1,18 +1,20 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { contact } from "../../../constants/contact";
 import Icons from "../../Others/IconProvider";
 
 const { FaMapMarkerAlt, FaGithub, FaLinkedin, IoMail } = Icons;
 
 function Contact() {
+  const { t } = useTranslation();
   const { email, github, linkedin, country, city } = contact;
+  const availability = t("contact.availability", { returnObjects: true });
 
-  const mainEmail = email.find((e) => e.main)?.address;
   return (
     <section className="section contact" id="contact">
       <div className="container">
         <div className="contact-header">
-          <h1>Contacto</h1>
+          <h1>{t("contact.title")}</h1>
         </div>
 
         <div className="contact-list">
@@ -25,7 +27,9 @@ function Contact() {
               <IoMail className="contact-icon" />
               <div className="contact-text">
                 <span className="contact-label">
-                  {e.main ? "Email principal" : "Email alternativo"}
+                  {e.main
+                    ? t("contact.labels.mainEmail")
+                    : t("contact.labels.altEmail")}
                 </span>
                 <span className="contact-value">{e.address}</span>
               </div>
@@ -61,7 +65,7 @@ function Contact() {
             </span>
 
             <div className="availability">
-              {contact.availability.map((mode, index) => (
+              {availability.map((mode, index) => (
                 <span key={index} className="availability-badge">
                   {mode}
                 </span>

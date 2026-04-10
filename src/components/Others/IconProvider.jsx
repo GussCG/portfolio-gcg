@@ -68,6 +68,8 @@ import MusedMXIcon from "../../assets/icons/musedmx-icon.svg?react";
 import QuizUpIcon from "../../assets/icons/quizup-icon.svg?react";
 import GeoWessIcon from "../../assets/icons/geowess-icon.svg?react";
 
+import { FaBasketballBall } from "react-icons/fa";
+
 const Icons = {
   FaGithub,
   FaLinkedin,
@@ -88,6 +90,7 @@ const Icons = {
   MySQL: SiMysql,
   "Scikit-learn": SiScikitlearn,
   "API de Google Maps": SiGooglemaps,
+  "Google Maps API": SiGooglemaps,
   Handlebars: SiHandlebarsdotjs,
   CSS: SiCss3,
   Python: SiPython,
@@ -126,6 +129,7 @@ const Icons = {
   // "Editor de Diagramas E-R": EditorERIcon,
   QuizUp: QuizUpIcon,
   GeoWess: GeoWessIcon,
+  Basketball: FaBasketballBall,
 };
 
 export default Icons;

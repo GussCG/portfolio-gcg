@@ -1,15 +1,17 @@
-import { aboutMe } from "../../../constants/aboutme";
+import { useTranslation } from "react-i18next";
 import Icons from "../../Others/IconProvider";
 
 const { FaMapMarkerAlt } = Icons;
 
 function About() {
+  const { t } = useTranslation();
+  const aboutMe = t("about", { returnObjects: true });
   const { profile, summary, description, highlights, philosophy } = aboutMe;
 
   return (
     <section className="section about">
       <div className="container">
-        <h1>Sobre mí</h1>
+        <h1>{t("about.sectionTitle")}</h1>
 
         <div className="about-grid">
           <div className="about-profile">
@@ -27,12 +29,12 @@ function About() {
           </div>
 
           <div className="about-summary">
-            <h2>Resumen</h2>
+            <h2>{t("about.summaryTitle")}</h2>
             <p>{summary}</p>
           </div>
 
           <div className="about-description">
-            <h2>Descripción</h2>
+            <h2>{t("about.descriptionTitle")}</h2>
             <ul>
               {description.map((paragraph, index) => (
                 <li key={index}>{paragraph}</li>
@@ -41,7 +43,7 @@ function About() {
           </div>
 
           <div className="about-highlights">
-            <h2>Logros Destacados</h2>
+            <h2>{t("about.highlightsTitle")}</h2>
             <div className="badges-container">
               {highlights.map((highlight, index) => {
                 const IconComponent = Icons[highlight.icon];
@@ -62,7 +64,7 @@ function About() {
           </div>
 
           <div className="about-philosophy">
-            <h2>Filosofía de Trabajo</h2>
+            <h2>{t("about.philosophyTitle")}</h2>
             <ul>
               {philosophy.map((principle, index) => (
                 <li key={index}>

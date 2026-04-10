@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import MainLayout from "./layouts/MainLayout";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./styles/App.scss";
@@ -11,6 +12,7 @@ import Contact from "./components/sections/Contact/Contact";
 import About from "./components/sections/About/About";
 
 function App() {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -27,12 +29,8 @@ function App() {
   if (isMobile) {
     return (
       <div className="mobile-warning">
-        <h1>Pronto Versión para Móviles!</h1>
-        <p>
-          Estamos trabajando en una versión optimizada para dispositivos
-          móviles. Por favor, visita el sitio desde una computadora para una
-          mejor experiencia.
-        </p>
+        <h1>{t("mobileWarning.title")}</h1>
+        <p>{t("mobileWarning.description")}</p>
       </div>
     );
   }

@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Icons from "../../Others/IconProvider";
 
 const { FaTrophy, FaGithub, FaYoutube, FaMousePointer } = Icons;
 
 function ProjectCard({ project }) {
+  const { t } = useTranslation();
   const {
     title,
     status,
+    statusType,
     role,
     description,
     tech,
@@ -34,7 +37,7 @@ function ProjectCard({ project }) {
 
           {status && (
             <span
-              className={`status ${status.toLowerCase() === "desplegado" ? "deployed" : ""}`}
+              className={`status ${statusType === "deployed" ? "deployed" : ""}`}
             >
               {status}
             </span>
@@ -84,7 +87,8 @@ function ProjectCard({ project }) {
       <div className="project-links">
         {demo && (
           <a href={demo} target="_blank" rel="noreferrer">
-            <FaMousePointer className="demo-icon" /> Ver Demo
+            <FaMousePointer className="demo-icon" />{" "}
+            {t("projects.actions.viewDemo")}
           </a>
         )}
         {github &&
@@ -102,12 +106,14 @@ function ProjectCard({ project }) {
             ))
           ) : (
             <a href={github} target="_blank" rel="noreferrer">
-              <FaGithub className="github-icon" /> Ver Código
+              <FaGithub className="github-icon" />{" "}
+              {t("projects.actions.viewCode")}
             </a>
           ))}
         {demoVideo && (
           <a href={demoVideo} target="_blank" rel="noreferrer">
-            <FaYoutube className="youtube-icon" /> Ver Video
+            <FaYoutube className="youtube-icon" />{" "}
+            {t("projects.actions.viewVideo")}
           </a>
         )}
       </div>

@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { projects } from "../../../constants/projects";
+import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {
+  const { t } = useTranslation();
+  const projects = t("projects.cards", { returnObjects: true });
+  const filters = t("projects.filters", { returnObjects: true });
+
   const [filter, setFilter] = useState("All");
 
   const filteredProjects =
@@ -14,15 +18,15 @@ function Projects() {
     <section className="section projects" id="projects">
       <div className="container">
         <div className="projects-header">
-          <h1>Proyectos Destacados</h1>
+          <h1>{t("projects.title")}</h1>
           <div className="filters">
-            {["All", "Web", "Backend", "Mobile"].map((cat) => (
+            {filters.map((cat) => (
               <button
-                key={cat}
-                className={filter === cat ? "active" : ""}
-                onClick={() => setFilter(cat)}
+                key={cat.key}
+                className={filter === cat.key ? "active" : ""}
+                onClick={() => setFilter(cat.key)}
               >
-                {cat}
+                {cat.label}
               </button>
             ))}
           </div>

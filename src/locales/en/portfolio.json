@@ -1,0 +1,352 @@
+{
+  "ui": {
+    "lang": "Language",
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "mobileWarning": {
+    "title": "Mobile version coming soon",
+    "description": "We are working on a version optimized for mobile devices. Please visit the site from a desktop for a better experience."
+  },
+  "sidebar": {
+    "profileRole": "FullStack Developer",
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "skills": "Skills",
+      "education": "Education",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "title": "Hi, I am Gustavo Cerda",
+    "subtitle": "FullStack Developer",
+    "description": "Computer Systems Engineer (graduated, degree process in progress) from ESCOM-IPN focused on building scalable and practical web applications. I specialize in covering the full software lifecycle, from UX/UI analysis and design to robust API and database implementation. My goal is to turn complex ideas into efficient technical solutions.",
+    "stats": [
+      {
+        "number": "+5",
+        "label": "years of technical training"
+      },
+      {
+        "number": "10/10",
+        "label": "final graduation project score"
+      },
+      {
+        "number": "FullStack",
+        "label": "JS, React, Node.js, SQL and more"
+      }
+    ],
+    "actions": {
+      "projects": "View projects",
+      "downloadCv": "Download CV"
+    }
+  },
+  "about": {
+    "sectionTitle": "About me",
+    "summaryTitle": "Summary",
+    "descriptionTitle": "Description",
+    "highlightsTitle": "Key highlights",
+    "philosophyTitle": "Work philosophy",
+    "profile": {
+      "name": "Gustavo Cerda Garcia",
+      "role": ["Computer Systems Engineer", "Full Stack Developer"],
+      "location": "Mexico City, Mexico",
+      "motto": "Discipline, technical leadership, and continuous learning based on official documentation."
+    },
+    "summary": "Full Stack Developer graduated from ESCOM-IPN with experience leading end-to-end architecture projects, from requirement analysis to deployment. Specialized in turning complex logic into functional solutions with React, Node.js, and relational databases. I stand out for fast technical adaptability, clean code, and strong ownership of software lifecycle with a focus on user experience and scalability.",
+    "description": [
+      "I am an engineer characterized by consistent discipline and rigorous organization in every project I lead. From my technical studies at CECyT 8 to graduating from ESCOM with honors, I have maintained full commitment to academic and professional excellence.",
+      "I have strong self-learning and technical adaptability. My methodology is based on deep analysis of official documentation for libraries and frameworks, allowing me to master new technologies and deliver high-quality results quickly.",
+      "I naturally take leadership roles in development teams and lead by example. I am usually the first to tackle complex technical tasks so the team can achieve objectives with scalable architecture and clean code."
+    ],
+    "highlights": [
+      {
+        "label": "Overall GPA",
+        "value": "9.0 / 10",
+        "icon": "GraduationCap"
+      },
+      {
+        "label": "Honors",
+        "value": "Final Project 10/10",
+        "icon": "Award"
+      },
+      {
+        "label": "Status",
+        "value": "Graduated (degree process in progress)",
+        "icon": "Calendar"
+      }
+    ],
+    "philosophy": [
+      "Deep learning through official documentation.",
+      "Hands-on technical leadership.",
+      "Structured problem solving for complex systems.",
+      "Clean code and scalability first."
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "id": 1,
+        "institution": "National Polytechnic Institute - Higher School of Computing",
+        "degree": "Computer Systems Engineering",
+        "period": "2020 - 2026",
+        "status": "Graduated (degree process in progress)",
+        "grade": "GPA: 9.0 / 10",
+        "logos": ["IPN", "ESCOM"]
+      },
+      {
+        "id": 2,
+        "institution": "National Polytechnic Institute - CECyT 8 Narciso Bassols",
+        "degree": "Computer Technician",
+        "period": "2017 - 2020",
+        "status": "Graduated",
+        "logos": ["IPN", "CECyT8"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured projects",
+    "filters": [
+      { "key": "All", "label": "All" },
+      { "key": "Web", "label": "Web" },
+      { "key": "Backend", "label": "Backend" },
+      { "key": "Mobile", "label": "Mobile" }
+    ],
+    "actions": {
+      "viewDemo": "View demo",
+      "viewCode": "View code",
+      "viewVideo": "Watch video"
+    },
+    "cards": [
+      {
+        "id": 1,
+        "title": "MusedMX",
+        "role": "Project Lead / Lead Full Stack Developer",
+        "status": "Available via video demo",
+        "statusType": "normal",
+        "description": "Web platform focused on improving cultural exploration in downtown Mexico City through personalized recommendations based on user preferences, interests, location radius, and visit history.",
+        "tech": [
+          "Node.js",
+          "Express.js",
+          "React",
+          "SASS",
+          "MySQL",
+          "Scikit-learn",
+          "Google Maps API"
+        ],
+        "highlights": [
+          "Museum recommendation system based on user preferences, location, and visit history.",
+          "Recommendation algorithm powered by Scikit-learn.",
+          "Interactive UI built with React and SASS.",
+          "Google Maps API integration for museum location and navigation.",
+          "Ratings and comments system to improve future recommendations."
+        ],
+        "demoVideo": "https://youtu.be/8yaSeS1wAI0",
+        "github": "https://github.com/GussCG/project-musedmx",
+        "category": "Web",
+        "achievements": [
+          "Final score 10/10 with honors for the graduation project at ESCOM-IPN.",
+          "Project presented at the CAECH 2025 International Congress."
+        ],
+        "icon": "MusedMX"
+      },
+      {
+        "id": 2,
+        "title": "E-R Diagram Editor",
+        "role": "Lead Full Stack Developer",
+        "status": "Deployed",
+        "statusType": "deployed",
+        "description": "Entity-Relationship diagram design system with validation, relational diagram generation, SQL export, and Gemini-based AI assistant for technical guidance.",
+        "tech": ["React", "Node.js", "React Flow", "Gemini API"],
+        "highlights": [
+          "ER diagram validation with referential integrity rules.",
+          "Intuitive interface for ER modeling.",
+          "Automatic SQL generation from diagrams.",
+          "Gemini assistant integration for creation support and technical questions."
+        ],
+        "demo": "https://app-der.vercel.app/",
+        "github": "https://github.com/GussCG/app-der",
+        "category": "Web",
+        "icon": "FaRocket"
+      },
+      {
+        "id": 3,
+        "title": "GeoWess",
+        "role": "Project Lead / Lead Full Stack Developer",
+        "status": "Migrating to React + TypeScript + Supabase",
+        "statusType": "normal",
+        "description": "Comprehensive system for managing and tracking public construction projects in Mexico City, centralizing administrative, financial, and operational control.",
+        "tech": [
+          "Node.js",
+          "Express.js",
+          "Handlebars",
+          "CSS",
+          "MySQL",
+          "React",
+          "TypeScript",
+          "Supabase"
+        ],
+        "highlights": [
+          "Automatic monthly report generation.",
+          "Monetary estimate calculations.",
+          "Budget control and project tracking.",
+          "Multi-role system with dynamic permissions."
+        ],
+        "achievements": [
+          "Designed and implemented new architecture with React + TypeScript.",
+          "Progressive frontend/backend decoupling.",
+          "Supabase integration as backend-as-a-service.",
+          "Refactoring focused on scalability and maintainability."
+        ],
+        "github": [
+          {
+            "label": "Node.js + Handlebars monolith",
+            "version": "Original version",
+            "url": "https://github.com/GussCG/GeoWess/tree/master"
+          },
+          {
+            "label": "React + TypeScript + Supabase migration",
+            "version": "In progress",
+            "url": "https://github.com/GussCG/geowess-react"
+          }
+        ],
+        "category": "Web",
+        "icon": "GeoWess"
+      },
+      {
+        "id": 4,
+        "title": "NBA.GG API",
+        "role": "Lead Backend Developer / Software Architect / Data Analyst",
+        "status": "Private API",
+        "statusType": "normal",
+        "description": "Python FastAPI REST API that consumes official NBA data to produce advanced statistics and game outcome predictions.",
+        "tech": ["Python", "FastAPI", "Uvicorn"],
+        "highlights": [
+          "Real-time NBA data consumption.",
+          "Predictive model for game outcomes.",
+          "RESTful architecture for easy third-party integration."
+        ],
+        "github": "https://github.com/GussCG/nba-gg/tree/master",
+        "category": "Backend",
+        "icon": "Basketball"
+      },
+      {
+        "id": 5,
+        "title": "QuizUp",
+        "role": "Lead Frontend Developer / Lead Backend Developer",
+        "status": "Functional MVP",
+        "statusType": "normal",
+        "description": "Mobile trivia app with multiple categories and difficulty levels, including authentication, profile management, and cloud statistics persistence.",
+        "tech": ["Flutter", "Dart", "Supabase", "REST API"],
+        "highlights": [
+          "Mobile trivia app with categories and difficulty levels.",
+          "Supabase-based authentication and user management.",
+          "REST API integration for dynamic question feeds.",
+          "Cloud persistence for records and stats.",
+          "Cross-platform mobile architecture."
+        ],
+        "github": "https://github.com/GussCG/quizup",
+        "category": "Mobile",
+        "icon": "FaRocket"
+      },
+      {
+        "id": 6,
+        "title": "MusedMX Mobile",
+        "role": "Mobile Development Lead",
+        "status": "In development",
+        "statusType": "normal",
+        "description": "Native mobile evolution of MusedMX featuring geofencing, local sensors, and mobility-focused micro-interactions.",
+        "tech": [
+          "Flutter",
+          "Dart",
+          "Node.js",
+          "MySQL",
+          "Cloudinary",
+          "Google Maps API",
+          "Local Notifications"
+        ],
+        "highlights": [
+          "Migration from web platform to mobile ecosystem.",
+          "Unified REST API for Web and Mobile interoperability.",
+          "Museum Passport gamification with geolocation.",
+          "Proximity notifications through geofencing.",
+          "Media optimization using Cloudinary.",
+          "Skeleton Loading and Hero Animations for seamless UX."
+        ],
+        "github": "https://github.com/GussCG/musedmx-mobile",
+        "category": "Mobile",
+        "icon": "MusedMX"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "labels": {
+      "mainEmail": "Primary email",
+      "altEmail": "Alternative email"
+    },
+    "availability": ["Remote", "Hybrid", "On-site"]
+  },
+  "skills": {
+    "title": "Technical skills",
+    "groups": [
+      {
+        "category": "Languages",
+        "useIcons": true,
+        "items": [
+          "JavaScript",
+          "Python",
+          "SQL",
+          "Java",
+          "C",
+          "C#",
+          "C++",
+          "Dart",
+          "PHP",
+          "TypeScript",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Frameworks and libraries",
+        "useIcons": true,
+        "items": [
+          "React",
+          "Node.js",
+          "Express.js",
+          "SASS",
+          "Handlebars",
+          "Flutter",
+          "FastAPI",
+          "React Flow",
+          "Google Maps API",
+          "Gemini API",
+          "Scikit-learn",
+          "Uvicorn",
+          "Spring Boot"
+        ]
+      },
+      {
+        "category": "Databases",
+        "useIcons": true,
+        "items": ["MySQL", "PostgreSQL", "Supabase"]
+      },
+      {
+        "category": "Other competencies",
+        "useIcons": false,
+        "items": [
+          "UX/UI",
+          "REST APIs",
+          "Git and GitHub",
+          "Scrum",
+          "Microsoft Office",
+          "Azure",
+          "Unity3D",
+          "PowerBI"
+        ]
+      }
+    ]
+  }
+}
