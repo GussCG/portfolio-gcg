@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
+=======
+import { Link } from "react-router-dom";
+>>>>>>> a282a4db78550248e81b299a5f7b26dc4a6a7688
 
 function Home() {
   const { t } = useTranslation();
@@ -22,9 +26,15 @@ function Home() {
         </div>
 
         <div className="buttons">
+<<<<<<< HEAD
           <a href="/projects" className="btn primary">
             {t("home.actions.projects")}
           </a>
+=======
+          <Link to="/projects" className="btn primary">
+            Ver Proyectos
+          </Link>
+>>>>>>> a282a4db78550248e81b299a5f7b26dc4a6a7688
           <a
             href="/Gustavo_Cerda_CV_2026.pdf"
             className="btn secondary"
