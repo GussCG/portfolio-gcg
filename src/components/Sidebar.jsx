@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../context/ThemeContext";
 import Icons from "./Others/IconProvider";
-import homeImg from "../assets/me/homeImg.png";
-import projectsImg from "../assets/me/projectsImg.png";
-import skillsImg from "../assets/me/skillsImg.png";
-import educationImg from "../assets/me/educationImg.png";
-import aboutImg from "../assets/me/aboutImg.png";
-import contactImg from "../assets/me/contactImg.png";
+import homeImg from "../assets/me/homeImg.webp";
+import projectsImg from "../assets/me/projectsImg.webp";
+import skillsImg from "../assets/me/skillsImg.webp";
+import educationImg from "../assets/me/educationImg.webp";
+import aboutImg from "../assets/me/aboutImg.webp";
+import contactImg from "../assets/me/contactImg.webp";
 
 const {
   FaGithub,
@@ -46,6 +46,10 @@ function Sidebar() {
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
+
+  useEffect(() => {
+    setIsLoaded(false);
+  }, [location.pathname]);
 
   return (
     <aside className="sidebar">
@@ -92,25 +96,27 @@ function Sidebar() {
               key={location.pathname}
               src={profileImg}
               onLoad={() => setIsLoaded(true)}
+              decoding="async"
               alt="Gustavo Cerda García"
               className="profile-image"
               initial={{
                 y: 40,
                 opacity: 0,
-                filter: "blur(8px), drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
+                filter: "blur(8px) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
               }}
               animate={{
-                y: 0,
+                y: isLoaded ? 0 : 40,
                 opacity: isLoaded ? 1 : 0,
-                filter: "blur(0px), drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
+                filter: isLoaded
+                  ? "blur(0px) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))"
+                  : "blur(8px) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
               }}
               exit={{
                 y: -40,
                 opacity: 0,
-                filter: "blur(8px), drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
+                filter: "blur(8px) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3))",
               }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              loading="lazy"
             />
           </AnimatePresence>
         </div>
