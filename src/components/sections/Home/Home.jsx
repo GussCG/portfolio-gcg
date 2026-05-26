@@ -2,8 +2,10 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const stats = t("home.stats", { returnObjects: true });
+
+  const currentLanguage = i18n.language ? i18n.language.toUpperCase() : "EN";
 
   return (
     <section className="section home">
@@ -27,11 +29,12 @@ function Home() {
             {t("home.actions.projects")}
           </Link>
           <a
-            href="/Gustavo_Cerda_CV_2026.pdf"
+            href={`/CV_Gustavo_Cerda_${currentLanguage.toUpperCase()}.pdf`}
             className="btn secondary"
-            download
+            download={`CV_Gustavo_Cerda_${currentLanguage.toUpperCase()}.pdf`}
           >
-            {t("home.actions.downloadCv")}
+            {t("home.actions.downloadCv")} -{" "}
+            {currentLanguage === "ES" ? "Español" : "English"}
           </a>
         </div>
       </div>
